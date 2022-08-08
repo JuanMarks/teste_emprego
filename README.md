@@ -30,10 +30,10 @@ email = teste1@gmail.com
 senha = 123456
 ```
 
-<p>So da pra fazer login com email, menos no django admin que so da pra fazer login com o nome de usuario</p>
-<p>So quem pode criar vagas sao os adms ou empresas e so quem pode se inscrever na vagas são os usuarios </p>
-<p>Para as empresas existe um dashboard onde poderam editar ou apagar as vagas que elas criaram</p>
-<p>Na dashboard da empresa nao mostrara vagas criadas por outras empresas</p>
-<p>Para os usuarios somente a pagina principal de vagas mas o botao de se inscrever desaparece se o usuario ja estiver inscrito na vaga </p>
+<p>- Só da pra fazer login com email, menos no django admin que so da pra fazer login com o nome de usuario</p>
+<p>- Só quem pode criar vagas sao os adms ou empresas e so quem pode se inscrever na vagas são os usuarios </p>
+<p>- Para as empresas existe um dashboard onde poderam editar ou apagar as vagas que elas criaram</p>
+<p>- Na dashboard da empresa nao mostrara vagas criadas por outras empresas</p>
+<p>- Para os usuarios somente a pagina principal de vagas mas o botao de se inscrever desaparece se o usuario ja estiver inscrito na vaga </p>
 <p>OBS: Quando o usuario se inscrever na vaga no campo Seu Nome coloque o nome de usuario </p>
-<p>Existe uma pagina saiba mais ou read more onde as empresas e os usuarios poderam acessar mas existe um campo que somente as empresas irao ver, que é o inscritos na vaga </p>
+<p>- Existe uma pagina saiba mais ou read more onde as empresas e os usuarios poderam acessar mas existe um campo que somente as empresas irao ver, que é o inscritos na vaga </p>
