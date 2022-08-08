@@ -1,0 +1,45 @@
+{% extends 'partials/base.html'%}
+{% load static %}
+{% block content %}
+        <!-- Responsive navbar-->
+        {% include 'partials/menu.html' %}
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">JOBS</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                
+                <div class="col-lg-8">
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        {% for vaga in vagas %}
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">{{vaga.date}}</div>
+                                    <h2 class="card-title h4">{{vaga.nome_vaga}}</h2>
+                                    <p class="card-text">Quantidade de vagas : {{vaga.qtd_vagas}}</p>
+                                    <a class="btn btn-primary" href="saibamais/{{vaga.id}}">Read more →</a>
+                                    {% if user.first_name == 'USR' %}
+                                        {% if user.username in vaga.inscritos_na_vaga %}
+                                        <p class="card-text"><strong>Você ja esta inscrito nessa vaga</strong></p>
+                                        {% else%}
+                                            <a class="btn btn-primary" href="cadastro_inscricao/{{vaga.id}}">Inscrever-se →</a>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+{% endblock %} 

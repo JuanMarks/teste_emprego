@@ -1,0 +1,44 @@
+{% extends 'partials/base.html'%}
+{% load static %}
+{% block content %}
+        <!-- Responsive navbar-->
+        {% include 'partials/menu.html' %}
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        {% for vaga in vagas %}
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">{{vaga.nome_vaga}}</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Vaga Postada dia {{vaga.date}} por {{vaga.pessoa}}</div>
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">Faixa Salarial: {{vaga.faixa_salarial}}</p>
+                            <p class="fs-5 mb-4">Quantidade de Vagas: {{vaga.qtd_vagas}}</p>
+                            <p class="fs-5 mb-4">Quantidade de Inscritos: {{vaga.qtd_inscritos}}</p>
+                            <p class="fs-5 mb-4">{{vaga.descricao_vaga}}</p>
+                        {% endfor %}
+                        {% if user.first_name == 'ADM' %}
+                            <p class="fs-5 mb-4">Inscritos na vaga: 
+                            {% for vaga in vagas %}
+                            {{vaga.inscritos_na_vaga}}
+                            {% endfor%}</p>
+                        {% endif %}   
+                            
+                            
+                            
+                        </section>
+                        
+                    </article>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
