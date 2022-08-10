@@ -28,6 +28,7 @@
                                     <div class="small text-muted">{{vaga.date}}</div>
                                     <h2 class="card-title h4">{{vaga.nome_vaga}}</h2>
                                     <p class="card-text">Quantidade de vagas : {{vaga.qtd_vagas}}</p>
+                                    <p class="card-text">Faixa Salarial : {{vaga.faixa_salarial}}</p>
                                     <a class="btn btn-primary" href="saibamais/{{vaga.id}}">Read more →</a>
                                     {% if user.first_name == 'USR' %}
                                         {% if user.username in vaga.inscritos_na_vaga %}

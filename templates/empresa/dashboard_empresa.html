@@ -18,15 +18,15 @@
                         {% for vaga in vagas %}
                         <div class="col-lg-6">
                             <!-- Blog post-->
-                            <div class="card mb-4">
+                            <div class="card mb-6">
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">{{vaga.date}}</div>
                                     <h2 class="card-title h4">{{vaga.nome_vaga}}</h2>
                                     <p class="card-text">Quantidade de vagas : {{vaga.qtd_vagas}}</p>
-                                    <a class="btn btn-primary" href="editar/{{vaga.id}}">Editar Vaga →</a><br>
+                                    <a class="btn btn-info" href="editar/{{vaga.id}}">Editar Vaga →</a><br>
                                     {% if user.first_name == 'ADM'%}
-                                    <br><a class="btn btn-primary" href="apagar/{{vaga.id}}">Apagar vaga →</a>
+                                    <br><a class="btn btn-danger" href="apagar/{{vaga.id}}">Apagar vaga →</a>
                                     {% endif %}
                                 </div>
                             </div>
